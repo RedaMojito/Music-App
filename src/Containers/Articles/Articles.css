@@ -1,0 +1,30 @@
+
+:root{
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+
+.articlesContainer{
+ display: block;
+
+}
+
+@media(min-width:790px){
+    .articlesContainer{ 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: .5em;
+        grid-auto-flow: dense;
+        margin: 0 1em;
+    }
+    .articlesContainer > :nth-child(-n+3){
+        margin-top: 9em;
+    }
+}

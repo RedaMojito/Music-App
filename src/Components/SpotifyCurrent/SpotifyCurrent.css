@@ -1,0 +1,45 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    margin-top: 3em;
+    margin-left: 3em;
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cover{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+.check-playing{
+    padding: .5em 1em;
+    border-radius: 5px;
+    background-color: mediumslateblue;
+    border: transparent;
+    font-size: 15px;
+    letter-spacing: .1em;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.now-playing{
+    margin: 5px;
+    color: mediumslateblue;
+}

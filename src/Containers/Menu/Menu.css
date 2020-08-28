@@ -1,0 +1,156 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Notable&display=swap');
+
+.menuContainer{
+    position: relative;
+    border-bottom : mediumpurple solid thin;
+}
+
+.soundTitle{
+    margin: 1em;
+    color: black;
+/* text-shadow: -3px -3px 5px rgb(255, 255, 255, 0.3); */
+}
+.soundTitle > span{
+    font-style: italic;
+    color: mediumslateblue;
+}
+@media(min-width:790px){
+    .menuContainer{ 
+        position: fixed;
+        width: 100%;
+        margin-bottom: 5em;
+        display: flex;
+       align-content: center;
+       background-color: mediumslateblue;
+    }
+    .menuContainer > .soundTitle{
+        align-self: center;
+    }
+    .soundTitle > span{
+        color: white;
+    }
+}
+
+.menuToggleBtn{
+    right: .1em;
+    top: -0.1em;
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+    font-size: 4em;
+    width: 1em;
+    height: 1em;
+    line-height: 0.5;
+    line-height: 0.4;
+    text-indent: 5em;
+    overflow: hidden;
+    white-space: nowrap;
+    color: mediumslateblue;
+    outline: none;
+}
+
+.menuToggleBtn::after{
+position: absolute;
+top: 0.2em;
+left: 0.2em;
+display: block;
+content: "\2261";
+text-indent: 0;
+cursor: pointer;
+
+}
+
+@media(min-width:790px){
+    .menuToggleBtn{
+        display: none;
+    }
+}
+
+
+.nav-menu{
+    list-style: none;
+    margin: 0 ;
+    padding: 0;
+    background-color: #E2E2F3 ;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    height: 0;
+}
+
+.open-menu{
+    height: 10em;
+}
+
+.nav-menu > li + li {
+    border-top: #E5C7D5 solid thin ;
+}
+
+.nav-menu > li > a {
+display: block;
+padding: 1em 1em;
+font-size: 1.1em;
+color: mediumslateblue;
+font-weight: normal;
+letter-spacing: .1em;
+cursor: pointer;
+font-family: 'Krona One', sans-serif;
+}
+
+@media(min-width:790px){
+    .nav-Container{
+        padding-top: 1.2em;
+        flex: 2;
+    }
+  .menu-dropdown{
+        display: flex !important;
+        align-content: center;
+    }
+     .nav-menu{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        background-color: mediumslateblue;
+        margin-left: 5em;
+        overflow: visible;
+        height: auto !important;
+    }
+    .nav-menu > li{
+        flex: 1;    
+    }
+    .nav-menu > li + li{
+        border: none;
+    }
+    .nav-menu > li > a{
+        font-size: 1.3em;
+        width: 40%;
+        color: white;
+        font-family: 'Krona One', sans-serif;
+    }
+
+    .spotify-link{
+        text-decoration: none;
+        list-style: none;
+    }
+    .spotify{
+        margin-top: 1em;
+        margin-right: 1em;
+        flex: 1;
+        padding: .8em;
+        border-radius: 20px;
+        border: transparent;
+        cursor: pointer;
+        color: mediumslateblue;
+        font-weight: 600;
+        font-size: medium;
+    }
+}
+    
